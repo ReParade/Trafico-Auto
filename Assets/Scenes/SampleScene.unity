@@ -409,13 +409,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ef50f1a2c1fc841b9db4c380637b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 1
+  velocidad: 10
   carroRojo: {fileID: 3290225838617444648, guid: c74611fc56391074fb559c24a7ea3730,
     type: 3}
-  carroAmarilloMini: {fileID: 2713213327442477731, guid: 011d6149eeca1574dac0c3e35c79872e,
+  carroAmarilloMini2: {fileID: 2713213327442477731, guid: 011d6149eeca1574dac0c3e35c79872e,
     type: 3}
-  CarroAmarillomini: []
-  Carrorojo: []
+  carroNegro: {fileID: 6508774873377213570, guid: f80964d77b6dc8447be847097309f30a,
+    type: 3}
+  carroBlanco: {fileID: 807552298838196580, guid: d2fccda670b2771478936ddf49dbc1e9,
+    type: 3}
+  carroBlancoArr: {fileID: 807552298838196580, guid: d2fccda670b2771478936ddf49dbc1e9,
+    type: 3}
+  camionetaBlancoArr: {fileID: 4250482483031177828, guid: a9519e4163e9e314fb30bebd569fcabb,
+    type: 3}
+  carroAmarilloArr: {fileID: 8523827739627097891, guid: d2513a3fc314ef4418a311c4691c4747,
+    type: 3}
+  carroAzulArr: {fileID: 6508774873377213570, guid: f80964d77b6dc8447be847097309f30a,
+    type: 3}
+  carroCelesteArr: {fileID: 2460271713632669594, guid: 98ed8d0f534069143a51baa3f9499f7f,
+    type: 3}
+  carroAmarilloMini: {fileID: 5535795901097567380, guid: 61a98b5976d08824f8633926d1a6a18c,
+    type: 3}
+  camionetaBlancaIzq: {fileID: 729323769514796456, guid: 871d61f8302ba384b93a9d4d59f2f121,
+    type: 3}
+  carroAzulIzq: {fileID: 6662605439840445881, guid: e1e23ba474c0eb842806a11725caa74c,
+    type: 3}
+  carroRojoDer: {fileID: 595459991741349197, guid: b0b74a3bc85082940ad1916a742e6619,
+    type: 3}
+  carroBlancoDer: {fileID: 706512812069478525, guid: 17a978e4b3f6c0e4db016d08517a4a07,
+    type: 3}
+  vertical: []
+  horizontal: []
 --- !u!4 &2082139380
 Transform:
   m_ObjectHideFlags: 0
