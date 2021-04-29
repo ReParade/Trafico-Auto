@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Carro
+  - Carro1
+  - Carro2
+  - Carro3
+  - Carro4
+  - Carro5
+  - Carro6
+  - Carro7
+  - Carro8
+  - Carro9
   layers:
   - Default
   - TransparentFX
