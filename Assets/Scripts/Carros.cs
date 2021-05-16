@@ -46,12 +46,12 @@ public class Carros : MonoBehaviour
     {
         if (collision.gameObject.tag == "Finish")
         {
-            Debug.Log("Colision");
+            //Debug.Log("Colision");
             colision = true;
         }
         if (collision.gameObject.tag == "GameController")
         {
-            Debug.Log("No Colsion");
+            //Debug.Log("No Colsion");
             colision = false;
         }
 
