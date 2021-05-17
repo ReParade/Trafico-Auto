@@ -9,7 +9,13 @@ public class ControladorSemaforos : MonoBehaviour
     private List<int> _estados = new List<int>() { 0 };
     
     private float _tiempoEntreEstadosSegundos = 10f;
+    private float _tiempoVerde = 15f;
+    private float _tiempoAmbar = 7f;
+    private float _tiempoRojo = 10f;
+    
     private float _cronometro = 0;
+
+    [SerializeField] private GameObject[] semaforos;
     
     void Update()
     {
@@ -25,15 +31,26 @@ public class ControladorSemaforos : MonoBehaviour
                 case verde: 
                     _estados[0] = ambar;
                     Debug.Log("Ambar");
+                    // semaforos[0].GetComponent<Semaforo>().CambiarEstado(ambar);
+                    // semaforos[1].GetComponent<Semaforo>().CambiarEstado(ambar);
                     break;
                 case ambar:
                     _estados[0] = rojo;
-                    Debug.Log("Rojo"); 
+                    Debug.Log("Rojo");
+                    semaforos[0].GetComponent<Semaforo>().CambiarEstado(verde);
+                    semaforos[1].GetComponent<Semaforo>().CambiarEstado(rojo);
                     break;
                 case rojo:
                     _estados[0] = verde;
                     Debug.Log("Verde");
+                    semaforos[0].GetComponent<Semaforo>().CambiarEstado(rojo);
+                    semaforos[1].GetComponent<Semaforo>().CambiarEstado(verde);
                     break;
+            }
+            
+            foreach (var carro in GameObject.FindGameObjectsWithTag("Carro"))
+            {
+                carro.GetComponent<Auto>().Avanzar();
             }
         }
     }
