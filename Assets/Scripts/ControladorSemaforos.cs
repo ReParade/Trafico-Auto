@@ -28,16 +28,16 @@ public class ControladorSemaforos : MonoBehaviour
             _cronometro = 0;
             switch(_estados[0])
             {
-                case verde: 
+                case verde:
                     _estados[0] = ambar;
                     Debug.Log("Ambar");
-                    // semaforos[0].GetComponent<Semaforo>().CambiarEstado(ambar);
-                    // semaforos[1].GetComponent<Semaforo>().CambiarEstado(ambar);
+                    semaforos[0].GetComponent<Semaforo>().CambiarEstado(verde);
+                    semaforos[1].GetComponent<Semaforo>().CambiarEstado(ambar);
                     break;
                 case ambar:
                     _estados[0] = rojo;
                     Debug.Log("Rojo");
-                    semaforos[0].GetComponent<Semaforo>().CambiarEstado(verde);
+                    semaforos[0].GetComponent<Semaforo>().CambiarEstado(ambar);
                     semaforos[1].GetComponent<Semaforo>().CambiarEstado(rojo);
                     break;
                 case rojo:
@@ -47,7 +47,7 @@ public class ControladorSemaforos : MonoBehaviour
                     semaforos[1].GetComponent<Semaforo>().CambiarEstado(verde);
                     break;
             }
-            
+
             foreach (var carro in GameObject.FindGameObjectsWithTag("Carro"))
             {
                 carro.GetComponent<Auto>().Avanzar();
